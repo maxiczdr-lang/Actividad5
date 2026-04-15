@@ -1,140 +1,128 @@
-
-h1,h2,h3 {
-  font-family: "Playfair Display",serif;
-  letter-spacing: 1px;
-}
-body,p {
-font-family: "Roboto", sans-serif;
-}
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
-
+h1,h2,h3 {
+font-family: "Playfair Display",serif;
+letter-spacing: 1px;
+}
+:root {
+--color-fondopg: #0B0F13;
+--color-superficie: #1A2230;
+--color-texto: #E5E7EB;
+--color-acento-hover: #8B5CF6;
+--color-secundario: #9CA3AF;
+--color-especiales: #3B82F6;
+}
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #0B0F13;
-  color: #E5E7EB;
-  line-height: 1.6;
+font-family: 'Roboto', sans-serif;
+background-color: var(--color-fondopg);
+color: var(--color-texto);
+line-height: 1.6;
 }
-
 header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: rgba(11, 15, 19, 0.8);
-  backdrop-filter: blur(10px);
-  padding: 15px 40px;
+position: fixed;
+width: 100%;
+top: 0;
+background: var(--color-fondopg);
+backdrop-filter: blur(10px);
+padding: 15px 40px;
 }
-
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
-
 nav ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
+display: flex;
 
+list-style: none;
+gap: 20px;
+}
 nav a {
-  text-decoration: none;
-  color: #E5E7EB;
-  transition: 0.3s;
+text-decoration: none;
+color: var(--color-texto);
+transition: 0.3s;
 }
-
 nav a:hover {
-  color: #8B5CF6;
+color: var(--color-acento-hover);
 }
-
 .inicio {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: linear-gradient(to bottom, #0B0F13, #1A2230);
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+background: linear-gradient(to bottom, var(--color-fondopg),
+var(--color-superficie));
 }
-
 .inicio h2 {
-  font-size: 2.5rem;
+font-size: 2.5rem;
 }
-
 section {
-  padding: 100px 40px;
+padding: 100px 40px;
 }
-
 .grid-integrantes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 20px;
 }
-
 .miembro {
-  background: #1A2230;
-  padding: 20px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
+background: var(--color-superficie);
+padding: 20px;
+border-radius: 10px;
+transition: 0.3s;
 
+}
 .miembro:hover {
-  transform: translateY(-5px);
+transform: translateY(-5px);
 }
-
 .frase {
-  font-style: italic;
-  color: #9CA3AF;
-  margin-top: 10px;
+font-style: italic;
+color: var(--color-secundario);
+margin-top: 10px;
 }
-
 .grid-discos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 20px;
 }
-
 .disco {
-  background: #1A2230;
-  padding: 20px;
-  border-radius: 10px;
+background: var(--color-superficie);
+padding: 20px;
+border-radius: 10px;
 }
-
 .btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #3B82F6;
-  color: white;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: 0.3s;
+display: inline-block;
+margin-top: 20px;
+padding: 10px 20px;
+background: var(--color-especiales);
+color: var(--color-texto);
+border-radius: 20px;
+text-decoration: none;
+transition: 0.3s;
 }
-
 .btn:hover {
-  background: #8B5CF6;
+background: var(--color-acento-hover);
 }
-
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
-}
+display: flex;
+flex-direction: column;
+gap: 10px;
 
+max-width: 400px;
+}
 input, textarea {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background: #1A2230;
-  color: white;
+padding: 10px;
+border: none;
+border-radius: 5px;
+background: var(--color-superficie);
+color: var(--color-texto);
 }
-
 footer {
-  text-align: center;
-  padding: 20px;
-  color: #9CA3AF;
+text-align: center;
+padding: 20px;
+color: var(--color-secundario);
+background: var(--color-fondopg);
 }
