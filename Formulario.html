@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+    <form method="POST">
+        <label for="nombre">Nombre Completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Rodriguez" required>
+        <label for="email">Ingrese su Email</label>
+        <input type="email" id="email" name="email" placeholder="Ej: Juan Rodriguez@gmail.com" required>
+        <label for="teléfono">Teléfono</label>
+        <input type="tel" id="teléfono" name="teléfono" placeholder="Ej 123456789" required>
+        <fieldset>
+          <legend>¿Cómo preferís que te contactemos? (email / teléfono / WhatsApp)</legend>
+          <input type="radio" id="contacto-email" name="contacto" value="email" required>
+          <label for="contacto-email">Email</label>
+          <input type="radio" id="contacto-teléfono" name="contacto" value="teléfono" required>
+          <label for="contacto-teléfono">Teléfono</label>
+          <input type="radio" id="contacto-whatsapp" name="contacto" value="WhatsApp" required>
+          <label for="contacto-whatsapp">WhatsApp</label>
+        </fieldset>
+
+        <select name="Motivo de su Consulta">
+            <option value="Consulta General">Consulta General</option>
+            <option value="Soporte">Soporte</option>
+            <option value="Presupuesto">Presupuesto</option>
+            <option value="Otro">Otro</option>
+        </select>
+
+        <textarea id="mensaje" name="mensaje" rows="20" cols="75">Escriba su mensaje</textarea>
+
+        <input type="checkbox" id="novedades" value="checkbox" /> Acepto recibir novedades</label><es />
+        
+        <button type="submit">Enviar</button>
+
+    </form>
+</html>
