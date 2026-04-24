@@ -171,6 +171,10 @@ input, textarea {
   color: var(--color-texto);
 }
 
+section {
+     background-image: url("https://images.squarespace-cdn.com/content/v1/5c66225bf8135a3f1a696d77/1647406044873-1G7LEVWDVIR2N2N7HLY5/home-7.jpg?format=2500w");
+        }
+
 footer {
   text-align: center;
   padding: 20px;
