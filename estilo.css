@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 h1,h2,h3 {
   font-family: "Playfair Display",serif;
   letter-spacing: 1px;
@@ -19,12 +20,13 @@ h1,h2,h3 {
 
 body {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: 
-     "header"
-     "main"
-     "footer";
-     min-height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto; 
+  grid-template-areas:
+    "header header"
+    "main inter"
+    "footer footer";
+  min-height: 100vh;
   font-family: 'Roboto', sans-serif;
   background-color: var(--color-fondopg);
   color: var(--color-texto);
@@ -34,14 +36,15 @@ body {
 header {grid-area: header;}
 main {grid-area: main;}
 footer {grid-area: footer;}
+#integrantes {grid-area: inter;} 
 
 header {
-position: fixed;
-width: 100%;
-top: 0;
-background: var(--color-fondopg);
-backdrop-filter: blur(10px);
-padding: 15px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: var(--color-fondopg);
+  backdrop-filter: blur(10px);
+  padding: 15px 40px;
 }
 
 nav {
@@ -80,8 +83,14 @@ nav a:hover {
   font-size: 2.5rem;
 }
 
+
 section {
   padding: 100px 40px;
+  background-image: url("https://images.squarespace-cdn.com/content/v1/5c66225bf8135a3f1a696d77/1647406044873-1G7LEVWDVIR2N2N7HLY5/home-7.jpg?format=2500w");
+  background-size: cover;          
+  background-repeat: no-repeat;    
+  background-position: center;
+  background-attachment: fixed;    
 }
 
 .grid-integrantes {
@@ -94,7 +103,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  background:  var(--color-superficie);
+  background: var(--color-superficie);
   padding: 20px;
   border-radius: 10px;
   transition: 0.3s;
@@ -106,7 +115,7 @@ section {
 
 .frase {
   font-style: italic;
-  color:  var(--color-secundario);
+  color: var(--color-secundario);
   margin-top: 10px;
 }
 
@@ -152,9 +161,7 @@ section {
   justify-content: space-between;
 }
 
-.galeria-item h3 {}
-.galeria-item p { flex: 1;}
-.galeria-item a {}
+.galeria-item p { flex: 1; }
 
 form {
   display: flex;
@@ -171,12 +178,10 @@ input, textarea {
   color: var(--color-texto);
 }
 
-section {
-     background-image: url("https://images.squarespace-cdn.com/content/v1/5c66225bf8135a3f1a696d77/1647406044873-1G7LEVWDVIR2N2N7HLY5/home-7.jpg?format=2500w");
-        }
-
 footer {
+  background-color: #0B0F13;
   text-align: center;
+  width: 100%;
   padding: 20px;
   color: var(--color-secundario);
 }
